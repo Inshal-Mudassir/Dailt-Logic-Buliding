@@ -50,3 +50,73 @@
 // console.log(max);
 // ===============================================================================
 
+// 🧠 Problem 3: Second Largest Number
+
+// Find the second largest element in an array.
+
+// Example:
+// Input: [10, 5, 8, 20, 15]
+// Output: 15
+// 📌 Rules:
+// No sorting allowed
+// Only one loop preferred
+// Think carefully about:
+// largest
+// second largest
+
+// let input = [10, 5, 8, 20, 15];
+// let max = -Infinity;
+// let secondMax = -Infinity;
+
+// let lenOfArr = input.length;
+// for (let i=0; i<lenOfArr; i++) {
+//     let num = input[i];
+//     if (num > max) {
+//         secondMax = max;
+//         max = num;
+//     } else if (num > secondMax && num !== max) {
+//         secondMax = num;
+//     }
+// }
+// console.log(secondMax);
+// =====================================================================================
+// 🧠 Problem 5: Third Largest Element (NO sorting)
+
+// Example:
+
+// [10, 5, 8, 20, 15]
+
+// Output:
+
+// 10
+// 💡 Hint (don’t rush)
+
+// You now need:
+
+// let max = -Infinity;
+// let secondMax = -Infinity;
+// let thirdMax = -Infinity;
+
+// And update all three properly.
+
+let input = [10, 5, 8, 20, 15];
+
+let max = -Infinity;
+let secondMax = -Infinity;
+let thirdMax = -Infinity;
+let lenOfArr = input.length;
+
+for(let i=0; i<lenOfArr; i++) {
+    let num = input[i];
+    if (num > max) {
+        thirdMax = secondMax;
+        secondMax = max;
+        max = num;
+    } else if (num > secondMax && num < max) {
+        thirdMax = secondMax;
+        secondMax = num;
+    } else if (num > thirdMax && num < secondMax) {
+        thirdMax = num;
+    }
+}
+console.log(thirdMax);
