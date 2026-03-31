@@ -32,3 +32,21 @@
 //     }
 // }
 // console.log(freq);
+// ====================================================================
+// Find the First Element That Appears Once
+
+let arr = [4, 5, 1, 2, 0, 4, 1, 2];
+let freq = new Map();
+for(let num of arr) {
+    if(freq.has(num)) {
+        freq.set(num, freq.get(num) +1);
+    } else {
+        freq.set(num, 1);
+    }
+}
+for(let [key, value] of freq) {
+    if(value == 1) {
+        console.log(key);
+        return;
+    }
+}
