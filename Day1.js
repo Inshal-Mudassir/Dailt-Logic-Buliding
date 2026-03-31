@@ -99,24 +99,24 @@
 
 // And update all three properly.
 
-let input = [10, 5, 8, 20, 15];
+// let input = [10, 5, 8, 20, 15];
 
-let max = -Infinity;
-let secondMax = -Infinity;
-let thirdMax = -Infinity;
-let lenOfArr = input.length;
+// let max = -Infinity;
+// let secondMax = -Infinity;
+// let thirdMax = -Infinity;
+// let lenOfArr = input.length;
 
-for(let i=0; i<lenOfArr; i++) {
-    let num = input[i];
-    if (num > max) {
-        thirdMax = secondMax;
-        secondMax = max;
-        max = num;
-    } else if (num > secondMax && num < max) {
-        thirdMax = secondMax;
-        secondMax = num;
-    } else if (num > thirdMax && num < secondMax) {
-        thirdMax = num;
-    }
-}
-console.log(thirdMax);
+// for(let i=0; i<lenOfArr; i++) {
+//     let num = input[i];
+//     if (num > max) {
+//         thirdMax = secondMax;
+//         secondMax = max;
+//         max = num;
+//     } else if (num > secondMax && num < max) {
+//         thirdMax = secondMax;
+//         secondMax = num;
+//     } else if (num > thirdMax && num < secondMax) {
+//         thirdMax = num;
+//     }
+// }
+// console.log(thirdMax);
